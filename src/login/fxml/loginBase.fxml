@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <Label layoutX="72.0" layoutY="31.0" text="Вход в аккаунт">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameLoginField" layoutY="124.0" prefHeight="25.0" prefWidth="305.0" promptText="Введите логин" />
+      <Label layoutX="129.0" layoutY="91.0" prefHeight="20.0" prefWidth="42.0" text="Логин">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="155.0" text="Пароль">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordLoginField" layoutX="-1.0" layoutY="192.0" prefHeight="25.0" prefWidth="305.0" promptText="Введите пароль" />
+      <ProgressIndicator fx:id="progressLoginForm" layoutX="124.0" layoutY="300.0" visible="false" />
+      <Button fx:id="loginButton" layoutX="50.0" layoutY="242.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="200.0" text="Войти" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="242.0" />
+   </children>
+   <effect>
+      <Blend mode="LIGHTEN" />
+   </effect>
+</AnchorPane>
