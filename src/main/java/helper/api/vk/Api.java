@@ -12,8 +12,8 @@ public class Api {
 
     /**
      *
-     * @param accessToken
-     * @param appId
+     * @param accessToken token
+     * @param appId your app id
      */
     public Api(String accessToken, String appId) {
         this.accessToken = accessToken;
