@@ -1,23 +1,35 @@
 package login;
 
+import helper.api.vk.Auth;
+import helper.api.vk.Constants;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by Владислав on 15.08.14.
  */
-public class LoginController {
+public class LoginController{
 
     @FXML TextField nameLoginField;
     @FXML PasswordField passwordLoginField;
     @FXML ProgressIndicator progressLoginForm;
     @FXML Button loginButton;
+    @FXML WebView authView;
+    @FXML AnchorPane anchorWeb;
+    private WebEngine engine;
 
-    public void login(){
+    @FXML
+    public void login() throws UnsupportedEncodingException {
         progressLoginForm.setVisible(true);
-
+        new CommonController().createWindow("/fxml/authorizePage.fxml","Авторизация");
     }
+
 }
