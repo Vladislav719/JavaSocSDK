@@ -3,6 +3,8 @@ package helper.api.vk.utils;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by vladislav on 15.08.14.
@@ -100,4 +102,14 @@ public class BaseUtil {
             return host;
         }
     }
+
+    public static String extractPattern(String str, String pattern) {
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(str);
+        if (!m.find()){
+            return null;
+        }
+        return m.toMatchResult().group(1);
+    }
+
 }
